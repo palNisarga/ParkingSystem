@@ -1,6 +1,6 @@
 package FInalPark;
 import java.sql.*;
-public class MySQL 
+public class ClientConfig 
 {  
 
 public Connection create() {
