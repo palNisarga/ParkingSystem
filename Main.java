@@ -1,4 +1,4 @@
-package ParkingLot;
+package FInalPark;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -9,11 +9,18 @@ import java.sql.*;
 public class Main {
 
 	public static void main(String[] args) throws IOException, SQLException {
-		BaseClient client=new InMemoryClient();
-		String clientName = null;
-		if(clientName.equalsIgnoreCase("mySql")){
-			client=new MySqlClient();}
 		Scanner input = new Scanner(System.in);
+	    String clientName = null;
+	    System.out.println("Enter Client");
+	    clientName = input.next();
+	    
+	    BaseClient client=null;
+		if(clientName.equalsIgnoreCase("mysql")){
+			client=new MySqlClient();
+		}
+		else if(clientName.equalsIgnoreCase("inmemory")){
+			client=new InMemoryClient();
+		}
 	    int menu = 0;
 		do {
 			Menu.options();
@@ -29,18 +36,18 @@ public class Main {
 			case(3):
 				client.SearchSlotByRegNumber();
 				break;
-           		 case(4):
-              			  client.SearchCarByColor();
+            case(4):
+            	client.SearchCarByColor();
 				break;
-           		 case(5):
-            			client.searchSlotByColor();//
+            case(5):
+            	client.searchSlotByColor();//
 				break;
 			case(0):
-               			 System.out.println("\nThank you!\n");
-	           		 break;
-            		default: {
-	            		 System.out.println("Invalid option!\n");
-	         		//break;
+                System.out.println("\nThank you!\n");
+	            break;
+            default: {
+	             System.out.println("Invalid option!\n");
+	         //break;
 	                    }
 		      }	
 		}
