@@ -1,4 +1,4 @@
-package FInalPark;
+package ParkingLot;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
