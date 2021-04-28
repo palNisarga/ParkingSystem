@@ -9,34 +9,31 @@ import java.sql.*;
 public class Main {
 
 	public static void main(String[] args) throws IOException, SQLException {
-		Object client=new InMemoryClient();
-		String FetchData = input.nextLine();
-		Object database;
-		if(FetchData.equalsIgnoreCase("inMemory")) {
-			else {
-				  database = new MysqlDB();
-
+		BaseClient client=new InMemoryClient();
+		String clientName = null;
+		if(clientName.equalsIgnoreCase("mySql")){
+			client=new MySqlClient();}
 		Scanner input = new Scanner(System.in);
-	    	int menu = 0;
+	    int menu = 0;
 		do {
 			Menu.options();
 			menu = input.nextInt();
       
 		switch(menu) {
 			case(1):
-				database.SetSlot();
+				client.SetSlot();
 				break;
 			case(2):
-				database.ToRemoveFromSlot();
+				client.ToRemoveFromSlot();
 				break;
 			case(3):
-				database.SearchSlotByRegNumber();
+				client.SearchSlotByRegNumber();
 				break;
            		 case(4):
-              			  database.SearchCarByColor();
+              			  client.SearchCarByColor();
 				break;
            		 case(5):
-            			database.searchSlotByColor();//
+            			client.searchSlotByColor();//
 				break;
 			case(0):
                			 System.out.println("\nThank you!\n");
