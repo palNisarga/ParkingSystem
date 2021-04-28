@@ -1,4 +1,4 @@
-package FInalPark;
+package ParkingLot;
 import java.sql.*;
 public class ClientConfig 
 {  
