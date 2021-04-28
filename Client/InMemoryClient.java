@@ -17,11 +17,11 @@ public class InMemoryClient {
 	    401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420);
 	    List<Integer> Occupied = new ArrayList<Integer>();
 	    Scanner input = new Scanner(System.in);
-	    int Menu;
+	  
 	    Hashtable<Integer, List<String>> Level = new Hashtable<Integer, List<String>>();	
 	    public void SetSlot() {
 		   
-		    int Menu;
+		    int menu;
 			String floor = " ";
 	        List<String> array = new ArrayList<String>(10);
 	        Date date = new Date();
