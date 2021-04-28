@@ -8,28 +8,13 @@ public class ClientConfig {
     public static Connection connection;
     public static Statement statement;
     public static Properties properties;
-    @SuppressWarnings("unused")
 	private static String client;
 
-
-    public void fileConfig() {
-        try {
-            properties = new Properties();
-            properties.load(new FileReader("src/main/resources/config.properties"));
-            MySQL.client = properties.getProperty("Client");
-        } catch (Exception e) {
-                 e.printStackTrace();
-        }
-
-}
-
-public Connection create() {
+public static Connection create() {
 	Connection con= null;
 	try{  
 		Class.forName("com.mysql.jdbc.Driver");  
-		con=DriverManager.getConnection(  
-				"jdbc:mysql://localhost:3306/test_db?characterEncoding=utf8","nisarga","qwertyuiop");    
-		
+		con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test_db?characterEncoding=utf8","nisarga","12345678");    
 		}
 	catch(Exception e){ 
 		System.out.println(e);
@@ -42,6 +27,16 @@ public Connection create() {
 
 	public void setConnection(Connection connection) {
 		MySQL.connection = connection;
+	}
+
+	public static String getClient() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void mysqlConnection() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
