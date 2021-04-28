@@ -2,7 +2,7 @@ package ParkingLot;
 import java.sql.*;
 import java.util.*;
 
-	public class MySqlClient {
+	public class MySqlClient extends BaseClient{
 		static Scanner input = new Scanner(System.in);
 		static MySQL mysql=new MySQL();
 		static Connection con = mysql.create();
