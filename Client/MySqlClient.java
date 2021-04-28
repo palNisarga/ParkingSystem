@@ -1,4 +1,4 @@
-package FInalPark;
+package ParkingLot;
 import java.sql.*;
 import java.util.*;
 
