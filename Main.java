@@ -1,4 +1,4 @@
-package ParkingLot;
+package parkingLot;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -36,16 +36,16 @@ public class Main {
 			case(3):
 				client.SearchSlotByRegNumber();
 				break;
-            case(4):
-            	client.SearchCarByColor();
+           		case(4):
+            			client.SearchCarByColor();
 				break;
-            case(5):
-            	client.searchSlotByColor();//
+          		case(5):
+           		 	client.searchSlotByColor();//
 				break;
 			case(0):
-                System.out.println("\nThank you!\n");
-	            break;
-            default: {
+               			 System.out.println("\nThank you!\n");
+	            		break;
+           	 default: {
 	             System.out.println("Invalid option!\n");
 	         //break;
 	                    }
