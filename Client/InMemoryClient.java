@@ -138,7 +138,7 @@ public class InMemoryClient extends BaseClient {
 	    	}
 			
 		}
-		public void SearchCarByColor() {
+		public void searchSlotByColor() {
 			System.out.println("Enter the color");
 	    	String Clr= input.next();
 	    	int count=0;
@@ -155,14 +155,10 @@ public class InMemoryClient extends BaseClient {
 	   
 	    	}
 			
-		}
-		@Override
-		public void searchSlotByColor() {
-			// TODO Auto-generated method stub
-			
-		}
-		
 	}
+		
+		
+}
 
 
 
