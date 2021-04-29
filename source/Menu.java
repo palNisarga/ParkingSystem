@@ -1,4 +1,4 @@
-package ParkingLot;
+package parkingLot;
 
 public class Menu {
 	public static void options() {
