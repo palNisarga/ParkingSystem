@@ -1,4 +1,4 @@
-package ParkingLot; 
+package parkingLot; 
 import java.io.FileReader;
 import java.sql.*;
 import java.util.Properties;
