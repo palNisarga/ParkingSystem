@@ -6,11 +6,9 @@ import java.util.Scanner;
 
 public class ClientConfig {
     public static Connection connection;
-    public static Statement statement;
-    public static Properties properties;
-	private static String client;
+    private static String client;
 
-public static Connection create() {
+    public static Connection create() {
 	Connection con= null;
 	try{  
 		Class.forName("com.mysql.jdbc.Driver");  
