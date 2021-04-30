@@ -9,7 +9,7 @@ import java.sql.*;
 public class Main {
 
 	public static void main(String[] args) throws IOException, SQLException {
-		Scanner input = new Scanner(System.in);
+	    Scanner input = new Scanner(System.in);
 	    String clientName = null;
 	    System.out.println("Enter Client");
 	    clientName = input.next();
