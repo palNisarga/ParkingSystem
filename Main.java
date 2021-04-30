@@ -40,7 +40,7 @@ public class Main {
             			client.SearchCarByColor();
 				break;
           		case(5):
-           		 	client.searchSlotByColor();//
+           		 	client.SearchSlotByColor();//
 				break;
 			case(0):
                			 System.out.println("\nThank you!\n");
