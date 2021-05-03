@@ -2,8 +2,6 @@ package parkingLot;
 import java.util.ArrayList;
 import java.util.Collections;
 import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.ServerAddress;
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.MongoCollection;
 import java.util.Arrays;
