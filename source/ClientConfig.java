@@ -3,6 +3,9 @@ import java.io.FileReader;
 import java.sql.*;
 import java.util.Properties;
 import java.util.Scanner;
+import com.mongodb.client.MongoDatabase; 
+import com.mongodb.MongoClient; 
+import com.mongodb.MongoCredential;
 
 public class ClientConfig {
     public static Connection connection;
