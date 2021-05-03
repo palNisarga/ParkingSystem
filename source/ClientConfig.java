@@ -36,5 +36,15 @@ public class ClientConfig {
 		// TODO Auto-generated method stub
 		
 	}
+	    public void mongoConnection(){
+        MongoClient mongoClient =new MongoClient(properties.getProperty("HOST"), Integer.parseInt(properties.getProperty("mongoPort")));
+        MongoDatabase database= mongoClient.getDatabase("car_parking");
+        this.setDatabase(database);
+        MongoCollection<Document> collection=database.getCollection("parking_system");
+        this.setCollection(collection);
+        this.setUpdateFields(new BasicDBObject());
+        this.setSetQuery(new BasicDBObject());
+        this.setWhereQuery(new BasicDBObject());
+    }
 
 }
