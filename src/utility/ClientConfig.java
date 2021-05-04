@@ -49,5 +49,24 @@ public class ClientConfig {
         this.setSetQuery(new BasicDBObject());
         this.setWhereQuery(new BasicDBObject());
     }
+		 public static MongoClient mongoConnection(){
+		      // Creating a Mongo client 
+		      MongoClient mongo = new MongoClient( "localhost" , 27017 ); 
+		   
+		      // Creating Credentials 
+		      MongoCredential credential; 
+		      credential = MongoCredential.createCredential("nisarga", "test_db", 
+		         "qwertyuiop".toCharArray()); 
+		      System.out.println("Connected to the database successfully"); 
+		      MongoDatabase database = mongo.getDatabase("myDatabase");
+		      database.createCollection("vehicles");
+		      
+		      // Accessing the database 
+		      //MongoDatabase database = mongo.getDatabase("myDb"); 
+		      System.out.println("Credentials :"+ credential);    
+		      return mongo;
+		      
+		      
+		   }
 
 }
