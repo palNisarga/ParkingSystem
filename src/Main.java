@@ -21,6 +21,9 @@ public class Main {
 		else if(clientName.equalsIgnoreCase("inmemory")){
 			client=new InMemoryClient();
 		}
+		else if(clientName.equalsIgnoreCase("mongo")){
+			client=new MongoClient();
+		}
 	    int menu = 0;
 		do {
 			Menu.options();
